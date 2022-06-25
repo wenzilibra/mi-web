@@ -1,0 +1,75 @@
+/* 清除样式 */
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/* header头部banner样式 */
+
+.topBanner {
+    height: 119px;
+    background: url("../images/1-top/topBanner.jpg") no-repeat center;
+}
+
+/* 头部操作栏背景色 */
+
+.topBar {
+    background: #333;
+}
+/* 容器盒子水平居中 */
+.container {
+    width: 1226px;
+    margin: 0 auto;
+}
+/* 头部操作栏菜单左侧浮动 */
+.topNav ul {
+    float: left;
+}
+/* 头部操作栏列表横向排列 */
+.topBar li {
+    display: inline-block;
+}
+/* 头部标签文字样式重置 */
+.topBar a {
+    font-size: 12px;
+    line-height: 40px;
+    color: #b0b0b0;
+}
+/* 购物车和登录信息右浮动 */
+.shoppingCart,
+.topInfo {
+    float: right;
+}
+/* 购物车按钮样式 */
+.shoppingCart {
+    padding: 0 12px;
+    margin-left: 20px;
+    background: #424242;
+}
+/* 购物车图标 */
+.shoppingCart i {
+    font-size: 18px;
+    color: #b0b0b0;
+}
+/* 头部操作栏清除浮动 */
+.topBar .container:after {
+    content: "";
+    display: block; /* clear属性只对块状元素起作用，所以需要设置display属性 */
+    clear: both;
+}
+/* 利用伪元素生成“管道符” */
+.topBar .container li+li:before {
+    content: "";
+    display: inline-block;
+    font-size: 0;
+    padding: 9px 5px 1px;
+    margin-left: 4px;
+    border-left: 1px solid #4e4e4e;
+}
