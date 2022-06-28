@@ -15,7 +15,7 @@ ol {
 
 .topBanner {
     height: 119px;
-    background: url("../images/1-top/topBanner.jpg") no-repeat center;
+    background: #c8c8c8 url("../images/1-top/topBanner.jpg") no-repeat center;
     cursor: pointer;
 }
 
@@ -39,6 +39,7 @@ ol {
 /* 头部操作栏列表横向排列 */
 .topBar li {
     display: inline-block;
+    position: relative;
 }
 
 /* 头部标签文字样式重置 */
@@ -101,6 +102,38 @@ ol {
     border-left: 1px solid #4e4e4e;
 }
 
+/* 下载浮框 */
+.download {
+    width: 124px;
+    height: 0px;
+    background: white;
+    font-size: 0;
+    box-shadow: 0 1px 5px #aaa;
+    position: absolute;
+    top: 40px;
+    left: 65%;
+    margin-left: -62px;
+    overflow: hidden;
+    transition: height 0.2s;
+}
+
+.download>img {
+    width: 90px;
+    margin: 18px 17px 12px;
+}
+
+.download p {
+    color: #333;
+    font-size: 14px;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+}
+
+.topBar li:hover>.download {
+    height: 148px;
+}
+
 /* --------------------------------------------------- */
 
 /* logo */
@@ -110,6 +143,11 @@ ol {
     ;
     margin-top: 24px;
     float: left;
+}
+
+.headerLogo img {
+    width: 56px;
+    height: 56px;
 }
 
 /* 导航菜单 */
@@ -183,13 +221,16 @@ ol {
     border: 1px solid #ccc;
     border-right: none;
 }
-.search input:hover + button {
+
+.search input:hover+button {
     border: 1px solid #ccc;
 }
+
 .search input:focus {
     border: 1px solid #ff6700;
     border-right: none;
 }
-.search input:focus + button {
+
+.search input:focus+button {
     border: 1px solid #ff6700;
 }
