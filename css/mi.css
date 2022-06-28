@@ -103,23 +103,28 @@ ol {
 
 /* --------------------------------------------------- */
 
-/* 头部菜单栏 */
+/* logo */
 .headerLogo {
     width: 234px;
+    font-size: 0;
+    ;
     margin-top: 24px;
     float: left;
 }
-.headerLogo a{
-    font-size: 0;
-    line-height: 0;
-    vertical-align: bottom;
+
+/* 导航菜单 */
+.headerNav {
+    float: left;
 }
+
 .headerNav ul {
-    font-size: 0; /* 消除li元素之间的间隔 */
+    font-size: 0;
+    /* 消除li元素之间的间隔 */
 }
 
 .headerNav li {
-    font-size: 16px; /* 消除li元素之间的间隔 */
+    font-size: 16px;
+    /* 消除li元素之间的间隔 */
     line-height: 100px;
     padding: 0 10px;
     display: inline-block;
@@ -127,4 +132,64 @@ ol {
 
 .headerNav li a {
     color: #333;
+    transition: all .3s;
+}
+
+.headerNav li a:hover {
+    color: #ff6700;
+}
+
+/* 清除浮动 */
+.topMainav .container:after {
+    content: "";
+    display: block;
+    /* clear属性只对块状元素起作用，所以需要设置display属性 */
+    clear: both;
+}
+
+/* 搜索部分 */
+.search {
+    margin-top: 24px;
+    float: right;
+}
+
+.search input {
+    width: 245px;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    border-right: none;
+    outline: none;
+}
+
+.search form {
+    font-size: 0;
+}
+
+.search button {
+    width: 52px;
+    height: 50px;
+    font-size: 24px;
+    color: #616161;
+    border: 1px solid #e0e0e0;
+    background: white;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+.search input:hover {
+    border: 1px solid #ccc;
+    border-right: none;
+}
+.search input:hover + button {
+    border: 1px solid #ccc;
+}
+.search input:focus {
+    border: 1px solid #ff6700;
+    border-right: none;
+}
+.search input:focus + button {
+    border: 1px solid #ff6700;
 }
