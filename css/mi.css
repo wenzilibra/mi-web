@@ -47,7 +47,7 @@ ol {
     font-size: 12px;
     line-height: 40px;
     color: #b0b0b0;
-    transition: all .5s;
+    transition: all .3s;
     /* 过渡属性 */
 }
 
@@ -63,15 +63,22 @@ ol {
 
 /* 购物车按钮样式 */
 .shoppingCart {
+    position: relative;
+}
+
+.shoppingCart a {
     color: #b0b0b0;
     padding: 0 12px;
     margin-left: 20px;
+    display: inline-block;
     background: #424242;
-    transition: all .5s;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: none;
 }
 
-.shoppingCart:hover {
+.shoppingCart a:hover {
     background: white;
 }
 
@@ -79,10 +86,41 @@ ol {
     color: #ff6700;
 }
 
+.shoppingCart i {
+    line-height: 0;
+}
+
 /* 购物车图标 */
 .shoppingCart i {
     font-size: 18px;
     vertical-align: -1px;
+}
+
+/* 购物车悬浮框 */
+.menuContent {
+    width: 316px;
+    height: 0;
+    box-sizing: border-box;
+    background: white;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    box-shadow: 0 1px 5px #aaa;
+    transition: all .3s;
+    overflow: hidden;
+}
+
+.menuContent p {
+    font-size: 12px;
+    color: #424242;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 20px 20px;
+}
+
+.shoppingCart a:hover+.menuContent {
+    height: 100px;
+    padding-top: 20px;
 }
 
 /* 头部操作栏清除浮动 */
@@ -103,6 +141,16 @@ ol {
 }
 
 /* 下载浮框 */
+.triangle {
+    width: 0;
+    border: 10px solid;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: none;
+}
+
 .download {
     width: 124px;
     height: 0px;
@@ -111,7 +159,7 @@ ol {
     box-shadow: 0 1px 5px #aaa;
     position: absolute;
     top: 40px;
-    left: 65%;
+    left: 67%;
     margin-left: -62px;
     overflow: hidden;
     transition: height 0.2s;
@@ -120,6 +168,7 @@ ol {
 .download>img {
     width: 90px;
     margin: 18px 17px 12px;
+    cursor: pointer;
 }
 
 .download p {
@@ -132,6 +181,10 @@ ol {
 
 .topBar li:hover>.download {
     height: 148px;
+}
+
+.topBar li:hover>.triangle {
+    display: block;
 }
 
 /* --------------------------------------------------- */
@@ -233,4 +286,9 @@ ol {
 
 .search input:focus+button {
     border: 1px solid #ff6700;
+}
+
+.search button:hover {
+    color: white;
+    background: #ff6700;
 }
