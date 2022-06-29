@@ -74,7 +74,7 @@ ol {
     background: #424242;
     cursor: pointer;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     transition: none;
 }
 
@@ -83,6 +83,7 @@ ol {
 }
 
 .shoppingCart:hover>a {
+    background: white;
     color: #ff6700;
 }
 
@@ -108,6 +109,7 @@ ol {
     box-shadow: 0 1px 5px #aaa;
     transition: all .3s;
     overflow: hidden;
+    z-index: 1;
 }
 
 .menuContent p {
@@ -119,6 +121,11 @@ ol {
 }
 
 .shoppingCart a:hover+.menuContent {
+    height: 100px;
+    padding-top: 20px;
+}
+
+.menuContent:hover {
     height: 100px;
     padding-top: 20px;
 }
@@ -149,6 +156,7 @@ ol {
     bottom: 0;
     left: 50%;
     display: none;
+    z-index: 2;
 }
 
 .download {
@@ -163,6 +171,7 @@ ol {
     margin-left: -62px;
     overflow: hidden;
     transition: height 0.2s;
+    z-index: 1;
 }
 
 .download>img {
@@ -291,4 +300,91 @@ ol {
 .search button:hover {
     color: white;
     background: #ff6700;
+}
+
+/* banner区域 */
+
+.heroBanner {
+    height: 460px;
+}
+
+.heroBanner img {
+    height: 460px;
+}
+
+/* 侧边导航栏 */
+.homeHero .container , .heroBanner{
+    position: relative;
+}
+
+.sideTab {
+    width: 234px;
+    height: 460px;
+    background: rgba(105, 101, 101, .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sideTab ul {
+    padding: 20px 0;
+}
+
+.sideTab ul li {
+    position: relative;
+    height: 42px;
+}
+.sideTab ul li:hover {
+    background: #ff6700;
+}
+.sideTab ul li a {
+    font-size: 14px;
+    line-height: 42px;
+    color: white;
+    padding-left: 20px;
+    display: block;
+}
+
+.sideTab ul li i {
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -8px;
+    cursor: pointer;
+    opacity: .65;
+}
+/* banner图片区域 */
+.leftArrow , .rightArrow {
+    width: 40px;
+    height: 70px;
+    background: transparent;
+    cursor: pointer;
+}
+.leftArrow:hover , .rightArrow:hover {
+    background: rgba(105, 101, 101, .6);
+
+}
+.leftArrow:hover>i , .rightArrow:hover>i {
+    opacity: .75;
+}
+.leftArrow {
+    position: absolute;
+    top: 50%;
+    left: 234px;
+    margin-top: -35px;
+}
+.rightArrow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -35px;
+}
+.heroBanner i {
+    font-size: 30px;
+    line-height: 70px;
+    display: block;
+    text-align: center;
+    color: white;
+    opacity: .45;
 }
