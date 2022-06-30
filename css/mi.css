@@ -360,39 +360,36 @@ ol {
 }
 .bannerScroll {
     width: 4904px;
-    height: 100%;
-    animation: bannerpic 20s linear 0s infinite;
+    animation: bannerpic 20s ease-in infinite;
 }
 .bannerScroll li {
+    font-size: 0;
     float: left;
 }
 @keyframes bannerpic {
     0% {
         margin-left: 0;
     }
-    8%{
+    24%{
         margin-left: 0;
     }
-    10%{
+    25%{
         margin-left: -1226px;
     }
-    38%{
+    49%{
         margin-left: -1226px;
     }
-    40%{
+    50%{
         margin-left: -2452px;
     }
-    68%{
+    74%{
         margin-left: -2452px;
     }
-    70%{
-        margin-left: -3678px;
-    }
-    98%{
+    75%{
         margin-left: -3678px;
     }
     100%{
-        margin-left: -4904px;
+        margin-left: -3678px;
     }
 }
 .leftArrow , .rightArrow {
