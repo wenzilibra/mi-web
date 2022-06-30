@@ -355,6 +355,46 @@ ol {
     opacity: .65;
 }
 /* banner图片区域 */
+.homeHero .container{
+    overflow: hidden;
+}
+.bannerScroll {
+    width: 4904px;
+    height: 100%;
+    animation: bannerpic 20s linear 0s infinite;
+}
+.bannerScroll li {
+    float: left;
+}
+@keyframes bannerpic {
+    0% {
+        margin-left: 0;
+    }
+    8%{
+        margin-left: 0;
+    }
+    10%{
+        margin-left: -1226px;
+    }
+    38%{
+        margin-left: -1226px;
+    }
+    40%{
+        margin-left: -2452px;
+    }
+    68%{
+        margin-left: -2452px;
+    }
+    70%{
+        margin-left: -3678px;
+    }
+    98%{
+        margin-left: -3678px;
+    }
+    100%{
+        margin-left: -4904px;
+    }
+}
 .leftArrow , .rightArrow {
     width: 40px;
     height: 70px;
