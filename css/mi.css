@@ -1,3 +1,9 @@
+/* 设定字体族 */
+body {
+    font-family: "pingfang sc", "microsoft yahei", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
 /* 清除样式 */
 
 a {
@@ -303,7 +309,9 @@ ol {
 }
 
 /* banner区域 */
-
+.homeHero {
+    height: 670px;
+}
 .heroBanner {
     height: 460px;
 }
@@ -313,7 +321,8 @@ ol {
 }
 
 /* 侧边导航栏 */
-.homeHero .container , .heroBanner{
+.homeHero .container,
+.heroBanner {
     position: relative;
 }
 
@@ -334,9 +343,11 @@ ol {
     position: relative;
     height: 42px;
 }
+
 .sideTab ul li:hover {
     background: #ff6700;
 }
+
 .sideTab ul li a {
     font-size: 14px;
     line-height: 42px;
@@ -354,69 +365,89 @@ ol {
     cursor: pointer;
     opacity: .65;
 }
+
 /* banner图片区域 */
-.homeHero .container{
+.homeHero .container .heroBanner {
     overflow: hidden;
 }
+
 .bannerScroll {
     width: 4904px;
     animation: bannerpic 20s ease-in infinite;
 }
+
 .bannerScroll li {
     font-size: 0;
     float: left;
 }
+
 @keyframes bannerpic {
     0% {
         margin-left: 0;
     }
-    24%{
+
+    24% {
         margin-left: 0;
     }
-    25%{
+
+    25% {
         margin-left: -1226px;
     }
-    49%{
+
+    49% {
         margin-left: -1226px;
     }
-    50%{
+
+    50% {
         margin-left: -2452px;
     }
-    74%{
+
+    74% {
         margin-left: -2452px;
     }
-    75%{
+
+    75% {
         margin-left: -3678px;
     }
-    100%{
+
+    100% {
         margin-left: -3678px;
     }
 }
-.leftArrow , .rightArrow {
+
+.leftArrow,
+.rightArrow {
     width: 40px;
     height: 70px;
     background: transparent;
     cursor: pointer;
 }
-.leftArrow:hover , .rightArrow:hover {
+
+.leftArrow:hover,
+.rightArrow:hover {
     background: rgba(105, 101, 101, .6);
 
 }
-.leftArrow:hover>i , .rightArrow:hover>i {
+
+.leftArrow:hover>i,
+.rightArrow:hover>i {
     opacity: .75;
 }
+
 .leftArrow {
     position: absolute;
     top: 50%;
     left: 234px;
     margin-top: -35px;
 }
+
 .rightArrow {
     position: absolute;
     top: 50%;
     right: 0;
     margin-top: -35px;
 }
+
 .heroBanner i {
     font-size: 30px;
     line-height: 70px;
@@ -424,4 +455,86 @@ ol {
     text-align: center;
     color: white;
     opacity: .45;
+}
+
+/* banner图列表 */
+.homeList{
+    margin-top: 14px;
+}
+.homeList>ul>li {
+    width: 316px;
+    height: 170px;
+    float: left;
+    transition: box-shadow .2s;
+}
+.homeList>ul>li:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+}
+.homeList>ul>li:first-child:hover{
+    box-shadow: none;
+}
+.homeList>ul>li+li {
+    margin-left: 14.6px;
+}
+
+.homeList>ul>li>a>img {
+    width: 100%;
+}
+
+.homeList>ul>li:first-child {
+    width: 234px;
+    height: 170px;
+    padding: 3px;
+    box-sizing: border-box;
+    background: #5f5750;
+}
+.homeLeftcard li{
+    width: 76px;
+    height: 82px;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+.homeLeftcard li:nth-child(4){
+    clear: both;
+}
+.homeLeftcard li a {
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding-top: 15px;
+    opacity: .7;
+    color: white;
+}
+.homeLeftcard li a:hover{
+    opacity: 1;
+}
+.col::after {
+    content: "";
+    width: 1px;
+    height: 70px;
+    display: block;
+    background-color: #fff;
+    opacity: .1;
+    position: absolute;
+    top: 6px;
+    right: 0;
+}
+.row::before {
+    content: "";
+    width: 70px;
+    height: 1px;
+    display: block;
+    background-color: #fff;
+    opacity: .1;
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+}
+.homeLeftcard li p {
+    font-size: 12px;
+    margin: 6px 0;
+}
+.homeLeftcard li i {
+    font-size: 24px;
 }
