@@ -10,10 +10,16 @@ a {
     text-decoration: none;
 }
 
+dl,
+dd,
 ul,
 ol {
     padding: 0;
     margin: 0;
+}
+
+ul,
+ol {
     list-style-type: none;
 }
 
@@ -566,69 +572,118 @@ ol {
     float: left;
 }
 
-.title a {
+.smart .title a {
     font-size: 16px;
     line-height: 58px;
     color: #424242;
     float: right;
 }
-.title i {
+
+.smart .title i {
     font-size: 20px;
     margin-left: 8px;
     color: #b0b0b0;
 }
-.title::after{
+
+.smart .title::after {
     content: "";
     display: block;
     clear: both;
 }
-.title a:hover,.title a:hover>i{
+
+.smart .title a:hover,
+.title a:hover>i {
     color: #ff6700;
 }
+
 .smart .left {
     width: 234px;
     height: 628px;
 }
-.right{
+
+.collocation .title ul {
+    float: right;
+}
+
+.collocation .title ul li {
+    float: left;
+    margin-left: 30px;
+}
+
+.collocation .title::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.collocation .title a {
+    font-size: 16px;
+    line-height: 58px;
+    padding-bottom: 2px;
+    color: #424242;
+}
+
+.collocation .title li:first-child>a {
+    color: #ff6700;
+    border-bottom: 2px solid #ff6700;
+}
+
+.collocation .title a:hover {
+    color: #ff6700;
+    border-bottom: 2px solid #ff6700;
+}
+
+.right {
     width: 992px;
     height: 628px;
 }
-.content > div {
+
+.content>div {
     float: left;
 }
+
 .content::after {
     content: "";
     display: block;
     clear: both;
 }
+
 .smart .left img {
     width: 100%;
 }
+
 .right img {
     width: 160px;
 }
+
 .right li {
     position: relative;
     float: left;
     margin: 0 0 14px 14px;
     transition: all .2s linear;
 }
+
 .right li:nth-child(1) {
     z-index: 1;
 }
+
 .right li:nth-child(2) {
     z-index: 1;
 }
+
 .right li:nth-child(3) {
     z-index: 1;
 }
+
 .right li:nth-child(4) {
     z-index: 1;
 }
+
 .right li:hover {
     top: -1px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
 }
+
 .right a {
     width: 234px;
     height: 300px;
@@ -638,6 +693,7 @@ ol {
     padding: 20px 0;
     text-align: center;
 }
+
 .right h3 {
     margin: 15px 10px 2px;
     font-size: 14px;
@@ -647,6 +703,7 @@ ol {
     overflow: hidden;
     color: #333;
 }
+
 .right .info {
     margin: 0 10px 10px;
     font-size: 12px;
@@ -656,6 +713,7 @@ ol {
     overflow: hidden;
     color: #b0b0b0;
 }
+
 .right .price {
     font-size: 14px;
     line-height: 21px;
@@ -665,10 +723,12 @@ ol {
     overflow: hidden;
     margin: 0 10px 14px;
 }
+
 .price span {
     color: #b0b0b0;
     text-decoration: line-through;
 }
+
 .collocation .left div {
     width: 234px;
     height: 300px;
@@ -676,10 +736,55 @@ ol {
     transition: all .2s linear;
     position: relative;
 }
+
 .collocation .left img {
     width: 100%;
 }
+
 .collocation .left div:hover {
     top: -1px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+}
+
+/* 底部地址栏 */
+.siteFooter ul {
+    font-size: 0;
+    padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.siteFooter ul li {
+    width: 19.8%;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #e0e0e0;
+}
+.siteFooter ul li:first-child {
+    border: none;
+}
+.siteFooter ul li a {
+    font-size: 16px;
+    line-height: 25px;
+    color: #616161;
+}
+
+.siteFooter ul li a:hover {
+    color: #ff6700;
+}
+
+.siteFooter i {
+    font-size: 24px;
+    line-height: 25px;
+    vertical-align: -3px;
+    margin-right: 6px;
+}
+
+.siteFooter .container ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.footerLinks {
+    padding: 40px 0;
 }
