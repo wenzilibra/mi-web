@@ -312,6 +312,7 @@ ol {
 .homeHero {
     height: 670px;
 }
+
 .heroBanner {
     height: 460px;
 }
@@ -458,21 +459,25 @@ ol {
 }
 
 /* banner图列表 */
-.homeList{
+.homeList {
     margin-top: 14px;
 }
+
 .homeList>ul>li {
     width: 316px;
     height: 170px;
     float: left;
     transition: box-shadow .2s;
 }
+
 .homeList>ul>li:hover {
     box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
 }
-.homeList>ul>li:first-child:hover{
+
+.homeList>ul>li:first-child:hover {
     box-shadow: none;
 }
+
 .homeList>ul>li+li {
     margin-left: 14.6px;
 }
@@ -488,16 +493,19 @@ ol {
     box-sizing: border-box;
     background: #5f5750;
 }
-.homeLeftcard li{
+
+.homeLeftcard li {
     width: 76px;
     height: 82px;
     text-align: center;
     float: left;
     position: relative;
 }
-.homeLeftcard li:nth-child(4){
+
+.homeLeftcard li:nth-child(4) {
     clear: both;
 }
+
 .homeLeftcard li a {
     height: 100%;
     display: block;
@@ -506,9 +514,11 @@ ol {
     opacity: .7;
     color: white;
 }
-.homeLeftcard li a:hover{
+
+.homeLeftcard li a:hover {
     opacity: 1;
 }
+
 .col::after {
     content: "";
     width: 1px;
@@ -520,6 +530,7 @@ ol {
     top: 6px;
     right: 0;
 }
+
 .row::before {
     content: "";
     width: 70px;
@@ -531,10 +542,144 @@ ol {
     bottom: 0;
     left: 3px;
 }
+
 .homeLeftcard li p {
     font-size: 12px;
     margin: 6px 0;
 }
+
 .homeLeftcard li i {
     font-size: 24px;
+}
+
+/* 主要内容区域 */
+.mainBody {
+    background: #f5f5f5;
+}
+
+.title h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 58px;
+    color: #333;
+    float: left;
+}
+
+.title a {
+    font-size: 16px;
+    line-height: 58px;
+    color: #424242;
+    float: right;
+}
+.title i {
+    font-size: 20px;
+    margin-left: 8px;
+    color: #b0b0b0;
+}
+.title::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.title a:hover,.title a:hover>i{
+    color: #ff6700;
+}
+.smart .left {
+    width: 234px;
+    height: 628px;
+}
+.right{
+    width: 992px;
+    height: 628px;
+}
+.content > div {
+    float: left;
+}
+.content::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.smart .left img {
+    width: 100%;
+}
+.right img {
+    width: 160px;
+}
+.right li {
+    position: relative;
+    float: left;
+    margin: 0 0 14px 14px;
+    transition: all .2s linear;
+}
+.right li:nth-child(1) {
+    z-index: 1;
+}
+.right li:nth-child(2) {
+    z-index: 1;
+}
+.right li:nth-child(3) {
+    z-index: 1;
+}
+.right li:nth-child(4) {
+    z-index: 1;
+}
+.right li:hover {
+    top: -1px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+}
+.right a {
+    width: 234px;
+    height: 300px;
+    box-sizing: border-box;
+    background: white;
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+}
+.right h3 {
+    margin: 15px 10px 2px;
+    font-size: 14px;
+    line-height: 21px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #333;
+}
+.right .info {
+    margin: 0 10px 10px;
+    font-size: 12px;
+    line-height: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #b0b0b0;
+}
+.right .price {
+    font-size: 14px;
+    line-height: 21px;
+    color: #ff6700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 10px 14px;
+}
+.price span {
+    color: #b0b0b0;
+    text-decoration: line-through;
+}
+.collocation .left div {
+    width: 234px;
+    height: 300px;
+    margin-bottom: 14px;
+    transition: all .2s linear;
+    position: relative;
+}
+.collocation .left img {
+    width: 100%;
+}
+.collocation .left div:hover {
+    top: -1px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
 }
